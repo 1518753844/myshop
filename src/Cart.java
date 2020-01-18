@@ -93,7 +93,7 @@ public class Cart {
         double money = in.nextDouble();
         double change = Change(money);
         while (change < 0) {
-            System.out.printf("您给的钱不够，您还需要给至少%f元，请再次输入您要交的金额：", change);
+            System.out.printf("您给的钱不够，您还需要给至少%.2f元，请再次输入您要交的金额：", -change);
             money = in.nextDouble();
             change = Change(money);
         }
@@ -101,6 +101,7 @@ public class Cart {
         System.out.printf("找您：%.1f元\n",change);
         System.out.println("购物车清空完毕，请键入任意键回车回到主页面");
         sum = 0;
+        balance = 0;
         cartgoods.clear();
         goodsdate.clear();
         in.next();
@@ -121,7 +122,7 @@ public class Cart {
     //删除操作
     public void Del(){
         Delete delete = new Delete(goodsdate,cartgoods);
-        delete.DelCmd(sum);
+        sum = delete.DelCmd(sum);
     }
 }
 

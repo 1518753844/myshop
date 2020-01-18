@@ -56,17 +56,17 @@ public class Operate {
                         cart.displaysettle();
                     if (tip1 == 2)
                         cart.Del();
-
                 }
                 else
                 {
                     System.out.println("购物车为空！请键入任意键后回车退出购物车");
                     in.next();
-
-                }
-                if (tip != 2)
+                    tip = 2;
                     break;
+                }
             }
+            if (tip != 2)
+                break;
 
         }
     }

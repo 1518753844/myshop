@@ -10,8 +10,8 @@ public class Goods {
 
     public Goods() {
         String[] goodsnames = {
-                "疯狂Java","算法第四代","Java核心技术 卷I","高等数学","篮球","足球",
-                "眼镜","充电宝","笔记本电脑","水杯",
+                "CrazyJava","Algorithms","Core Java Volumn I","Maths","Basketball","Football",
+                "Glasses","Power Bank","Laptop","Cup",
         } ;
         double[] prize = {
                 100.1, 80.1, 60.5, 22.5, 40.9, 40.8,

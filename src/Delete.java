@@ -59,8 +59,9 @@ public class Delete {
         System.out.println("请输入以上编号：");
         int tip = -1;
         tip = in.nextInt();
-        while (deleteway.contains(tip)){
+        while (deleteway.size()<tip || tip < 0){
             System.out.println("编号输入错误请重新输入");
+            tip = in.nextInt();
         }
         if(tip == 0)
         {
@@ -76,7 +77,7 @@ public class Delete {
             in.nextLine();
             name = in.nextLine();
 
-            while (goodsdate.containsKey(name))
+            while (!goodsdate.containsKey(name))
             {
                 System.out.println("购物车内没有该商品，请重新输入");
                 name = in.nextLine();
