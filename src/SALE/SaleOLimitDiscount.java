@@ -23,6 +23,6 @@ public class SaleOLimitDiscount extends Sale{
     @Override
     public double finalsum(double sum)
     {
-        return sum-((sum-limit)*sale);
+        return limit+((sum-limit)*sale);
     }
 }

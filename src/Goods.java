@@ -9,8 +9,14 @@ public class Goods {
     private ArrayList<String> goods = new ArrayList<String>();
 
     public Goods() {
-        String[] goodsnames = {"Crazy Java","algorithms 4th","Core Java Volume I","Basketball","Football"} ;
-        double[] prize = {100.1,80.1,60.5,40.9,40.8};
+        String[] goodsnames = {
+                "疯狂Java","算法第四代","Java核心技术 卷I","高等数学","篮球","足球",
+                "眼镜","充电宝","笔记本电脑","水杯",
+        } ;
+        double[] prize = {
+                100.1, 80.1, 60.5, 22.5, 40.9, 40.8,
+                525.1, 115.2,6255.33,20,
+        };
 
         for (int i = 0; i < prize.length; i++) {
             goodsDate.put(goodsnames[i],prize[i]);
@@ -20,11 +26,11 @@ public class Goods {
 
     public void display(){
         System.out.println("商品列表如下：");
-        System.out.println("编号    商品名称                        价格");
+        System.out.println("编号    商品名称                           价格");
         for (int i = 0; i < goods.size(); i++) {
             double prize = goodsDate.get(goods.get(i));
             String name = goods.get(i);
-            System.out.printf("%03d      %-28s%5.2f元\n",i+1,name,prize);
+            System.out.printf("%03d      %-25s\t%5.2f元\n",i+1,name,prize);
         }
     }
 
