@@ -64,7 +64,6 @@ public class Operate {
                     System.out.println("购物车为空！请键入任意键后回车退出购物车");
                     in.next();
                     tip = 2;
-                    break;
                 }
             }
             if (tip != 2)

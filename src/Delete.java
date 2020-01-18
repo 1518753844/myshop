@@ -48,6 +48,7 @@ public class Delete {
             goodsdate.remove(name);
         }
 
+
         sum -= prize*num;
         return sum;
     }
@@ -90,7 +91,7 @@ public class Delete {
             System.out.println("请输入要删除的个数：");
             num = in.nextInt();
 
-            while (goodsdate.get(name) < num)
+            while (cartgoods.get(name) < num)
             {
                 System.out.println("超出数量，请重新输入");
                 num = in.nextInt();
