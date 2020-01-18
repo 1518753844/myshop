@@ -20,17 +20,20 @@ public class Delete {
     }
 
 
+    //设置删除商品操作字符串
     public void setDeleteway(){
         deleteway.add("删除所有商品");
         deleteway.add("删除一定数量的商品");
     }
 
+    //删除所有商品
     public double DeleteAll(double sum){
         goodsdate.clear();
         cartgoods.clear();
         return 0;
     }
 
+    //删除一定数量的商品
     public double DeleteInNumber(int num,double sum,String name){
         int oldnum = cartgoods.get(name);
         double prize = goodsdate.get(name);
@@ -49,6 +52,7 @@ public class Delete {
         return sum;
     }
 
+    //删除的总操作 写的很死
     public double DelCmd(double sum)
     {
         Scanner in = new Scanner(System.in);

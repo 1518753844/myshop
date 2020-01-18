@@ -12,6 +12,7 @@ public class SaleOLimitDiscount extends Sale{
     }
 
 
+    //判断是否满足资格
     @Override
     public boolean Satisfied(double sum) {
         boolean satisfied = true;

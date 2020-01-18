@@ -8,6 +8,7 @@ public class Goods {
     private HashMap<String,Double> goodsDate = new HashMap<String, Double>();
     private ArrayList<String> goods = new ArrayList<String>();
 
+   //设置商品
     public Goods() {
         String[] goodsnames = {
                 "CrazyJava","Algorithms","Core Java Volumn I","Maths","Basketball","Football",
@@ -24,6 +25,7 @@ public class Goods {
         }
     }
 
+    //展示商品
     public void display(){
         System.out.println("商品列表如下：");
         System.out.println("编号    商品名称                           价格");
@@ -35,6 +37,7 @@ public class Goods {
     }
 
 
+    //获取商品名字
     public String getGoodsName(int i)
     {
         String name = "";
@@ -43,13 +46,10 @@ public class Goods {
         return name;
     }
 
+    //获取商品价格
     public double getGoodsPrize(int i)
     {
         return goodsDate.get(goods.get(i));
     }
 
-    public static void main(String[] args) {
-        Goods goods = new Goods();
-        goods.display();
-    }
 }

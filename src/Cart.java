@@ -107,6 +107,7 @@ public class Cart {
         in.next();
     }
 
+    //输出购物车内的商品数目
     public void printnum() {
         int cnt = 0;
         for (String s : cartgoods.keySet()) {
@@ -115,10 +116,12 @@ public class Cart {
         System.out.printf("\n        购物车内有%d件商品\n",cnt);
     }
 
+    //判断购物车是否为空
     public boolean hascontent()
     {
         return (cartgoods.size()!=0);
     }
+
     //删除操作
     public void Del(){
         Delete delete = new Delete(goodsdate,cartgoods);

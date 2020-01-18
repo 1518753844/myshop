@@ -22,6 +22,7 @@ public class Operate {
                 System.out.println("1.添加商品到购物车  2.查看购物车  （按下除了1，2数字为退出购物）");
                 System.out.print("请选择您的操作：");
                 tip = in.nextInt();
+                //添加商品操作
                 if (tip == 1) {
                     while (true) {
                         int num = 0;
@@ -42,6 +43,7 @@ public class Operate {
                 if (tip != 1)
                     break;
             }
+            //进入购物车内操作
             if (tip == 2)
             {
                 if (cart.hascontent())
